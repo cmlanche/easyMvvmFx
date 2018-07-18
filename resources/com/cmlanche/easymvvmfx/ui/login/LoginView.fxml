@@ -1,21 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 <?import java.net.URL?>
-<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:id="root" fx:controller="com.cmlanche.easymvvmfx.ui.login.LoginView">
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.cmlanche.easymvvmfx.ui.login.LoginView">
 
     <stylesheets>
         <URL value="@loginview.css"/>
     </stylesheets>
 
     <center>
-        <Label text="hello world" style="-fx-font-size: 32"></Label>
+        <Label style="-fx-font-size: 32" text="hello world"/>
     </center>
 
     <bottom>
-        <Button onMouseClicked="#onTray" text="tray">
-        </Button>
+        <VBox fx:id="testbox">
+            <Button fx:id="btn" onMouseClicked="#onTray" text="tray">
+            </Button>
+            <TextField fx:id="t1"/>
+            <TextField fx:id="t2"/>
+            <TextField fx:id="t3"/>
+        </VBox>
+
     </bottom>
 
 </BorderPane>
